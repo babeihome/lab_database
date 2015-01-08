@@ -43,7 +43,7 @@ if file_type == 'EXPERIMENT':
     cur = conn.cursor()
     cur.execute(order)
     result = cur.fetchone()
-    time_index['S_time'] = result[0]
+    time_index['S_time'] = str(result[0])
     time_index['E_time0'] = para_list['E_time0']
     time_index['E_name'] = E_name
     friendly_api.InsertData(conn, 'time_index', time_index)
