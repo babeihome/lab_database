@@ -21,3 +21,8 @@ def InsertData(conn, TableName, dic):
     except MySQLdb.Error, e:
         print order
         print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+
+
+def Select(conn, TableName, ):
+    pass
+
