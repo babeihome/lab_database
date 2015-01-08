@@ -3,5 +3,5 @@ DATABASE = 'DmpSWDBTest'
 USER = 'cong'
 PASSWD = ''
 HOST = 'dampe.ustc.edu.cn'
-PORT = '3306'
+PORT = 3306
 
