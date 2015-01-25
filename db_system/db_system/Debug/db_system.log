@@ -1,0 +1,15 @@
+﻿Build started 2015/1/24 10:00:04.
+     1>Project "H:\物理电子实验室\DATABASE\db_system\db_system\db_system.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cp_api_test.cpp
+         cp_api_test.cpp
+     1>c:\python27\include\pymath.h(22): warning C4273: 'round' : inconsistent dll linkage
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\math.h(516) : see previous definition of 'round'
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\物理电子实验室\DATABASE\db_system\Debug\db_system.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\物理电子实验室\DATABASE\db_system\Debug\db_system.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\物理电子实验室\DATABASE\db_system\Debug\db_system.lib" /MACHINE:X86 Debug\cp_api_test.obj
+     1>LINK : fatal error LNK1104: cannot open file 'python27_d.lib'
+     1>Done Building Project "H:\物理电子实验室\DATABASE\db_system\db_system\db_system.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:24.46

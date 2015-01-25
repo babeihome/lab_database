@@ -3,3 +3,9 @@
 /lab_database/.idea/
 *~
 *.pyc
+*.o
+*.opensdf
+*.sln
+*.suo
+*.vcxproj
+*.filters
