@@ -4,16 +4,7 @@ import friendly_api
 import MySQLdb
 
 def import_data():
-    """
-    print 'Please input user'
-    USER = raw_input()
-    print 'Please input passwd'
-    PASSWD = raw_input()
-    print 'Please input file needed import'
-    PATH = raw_input()
-    if PATH == '':
-        PATH = './PedestalPar'
-    """
+
     PATH = '/data/beamTest/2nd_2014_10/Calibration/DAMPE/Pedestal/PedestalPar'
     print "P: PATH is default setting\n"
     fp = open(PATH,"r")
