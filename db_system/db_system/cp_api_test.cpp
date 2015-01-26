@@ -44,10 +44,11 @@ int main(){
 	}
 	PyRun_SimpleString("import sys");
 	PyRun_SimpleString("sys.path.append('../python_API')");
+	PyRun_SimpleString("sys.path.append('./')");
 	printf("C: path of python_API was imported in sys.path\n");
 	//Load python module
 	//PyObject * pModule = PyImport_ImportModule("config");
-	PyObject *pModule = PyImport_ImportModule("ptest");
+	PyObject *pModule = PyImport_ImportModule("friendly_api");
 	if (pModule == NULL){
 		printf("pModule is NULL");
 		Py_Finalize();
@@ -56,6 +57,12 @@ int main(){
 	}
 	printf("C: operation level module imported\n");
 	PyObject *pFunc = PyObject_GetAttrString(pModule, "import_data");
+	if (pFunc == NULL){
+		printf("pFunc is NULL");
+		Py_Finalize();
+		getchar();
+		return 0;
+	}
 	printf("C: Function imported\n");
 	PyObject *pArgv = NULL;
 	printf("C: Is trying to call the import_data function\n");
