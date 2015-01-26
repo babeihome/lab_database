@@ -1,5 +1,6 @@
 import math
 import config
+
 c = math.e
 database = config.DATABASE
 print c

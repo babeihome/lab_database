@@ -4,8 +4,11 @@
 *~
 *.pyc
 *.o
+*.obj
 *.opensdf
 *.sln
 *.suo
 *.vcxproj
 *.filters
+*.pdb
+*.sdf

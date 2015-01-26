@@ -48,6 +48,12 @@ int main(){
 	//Load python module
 	//PyObject * pModule = PyImport_ImportModule("config");
 	PyObject *pModule = PyImport_ImportModule("raw_data_parse");
+	if (pModule == NULL){
+		printf("pModule is NULL");
+		Py_Finalize();
+		getchar();
+		return 0;
+	}
 	printf("C: operation level module imported\n");
 	PyObject *pFunc = PyObject_GetAttrString(pModule, "import_data");
 	printf("C: Function imported\n");
