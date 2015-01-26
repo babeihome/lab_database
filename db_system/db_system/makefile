@@ -10,10 +10,10 @@ LIB = -L/usr/local/lib/ -lpython2.7 -ldl -lutil
 all: $(TARGET)
  
 cp_api_test:  cp_api_test.o
-    $(CXX) -o $@ $^  $(LIB) $(C_FLAGS)
+	$(CXX) -o $@ $^  $(LIB) $(C_FLAGS)
  
 .cpp.o:
-    $(CXX) -c -o $*.o $(INC) $(C_FLAGS) $*.cpp
+	$(CXX) -c -o $*.o $(INC) $(C_FLAGS) $*.cpp
  
 clean:
-    -rm -f *.o $(TARGET)
+	-rm -f *.o $(TARGET)
