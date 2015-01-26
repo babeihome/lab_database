@@ -23,6 +23,22 @@ def InsertData(conn, TableName, dic):
         print "Mysql Error %d: %s" % (e.args[0], e.args[1])
 
 
-def Select(conn, TableName, ):
-    pass
+def Select(conn, TableName, Row_name_list=[], where=[]):
+    try:
+        cur = conn.cursor()
+        if Row_name_list == []:
+            row_name = '*'
+        else:
+            row_name = str(Row_name_list).strip('[').strip(']').replace(' ','')
+        order = 'SELECT ' + row_name + ' FROM ' + TableName
+        cur.execute(order)
+        # Data serialize 
+        pass
+
+        cur.close()
+    except MySQL.Error, e:
+        print order
+        print "Mysql Error %d: %s" % (e.args[0], e.args[1])
+
+
 

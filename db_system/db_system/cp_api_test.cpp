@@ -47,7 +47,7 @@ int main(){
 	printf("C: path of python_API was imported in sys.path\n");
 	//Load python module
 	//PyObject * pModule = PyImport_ImportModule("config");
-	PyObject *pModule = PyImport_ImportModule("raw_data_parse");
+	PyObject *pModule = PyImport_ImportModule("ptest");
 	if (pModule == NULL){
 		printf("pModule is NULL");
 		Py_Finalize();

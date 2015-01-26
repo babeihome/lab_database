@@ -5,6 +5,7 @@
 *.pyc
 *.o
 *.obj
+*.exe
 *.opensdf
 *.sln
 *.suo
