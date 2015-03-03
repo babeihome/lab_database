@@ -49,12 +49,9 @@ def import_data():
     print "P: done\n"
 
 
+def acquire_data(time):
+    # time is in ms form
+    conn = MySQLdb.connect(host=config.HOST, user=config.USER, passwd=config.PASSWD, db=config.DATABASE, port=config.PORT)
+    print "connection has built"
 
-
-
-
-
-
-
-
-
+    pass

@@ -42,13 +42,20 @@ int main(){
 		printf("Initialized fail");
 		return -1;
 	}
+	
 	PyRun_SimpleString("import sys");
+	PyRun_SimpleString("import os.path");
 	PyRun_SimpleString("sys.path.append('../python_API')");
+	/*
+	PyRun_SimpleString("print os.path.realpath(__file__)");
+	
 	PyRun_SimpleString("sys.path.append('./')");
+	PyRun_SimpleString("print sys.path");
 	printf("C: path of python_API was imported in sys.path\n");
+	*/
 	//Load python module
 	//PyObject * pModule = PyImport_ImportModule("config");
-	PyObject *pModule = PyImport_ImportModule("friendly_api");
+	PyObject *pModule = PyImport_ImportModule("raw_data_parse");
 	if (pModule == NULL){
 		printf("pModule is NULL");
 		Py_Finalize();
@@ -56,7 +63,7 @@ int main(){
 		return 0;
 	}
 	printf("C: operation level module imported\n");
-	PyObject *pFunc = PyObject_GetAttrString(pModule, "import_data");
+	PyObject *pFunc = PyObject_GetAttrString(pModule, "Select");
 	if (pFunc == NULL){
 		printf("pFunc is NULL");
 		Py_Finalize();
