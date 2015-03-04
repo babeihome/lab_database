@@ -36,6 +36,7 @@ void printList(PyObject* pList){
 
 int main(){
 	//Interupter of Python initialize first
+	PyObject * result = NULL;
 	Py_Initialize();
 
 	if (!Py_IsInitialized()){
@@ -64,7 +65,7 @@ int main(){
 		return 0;
 	}
 	printf("C: operation level module imported\n");
-	PyObject *pFunc = PyObject_GetAttrString(pModule, "import_data");
+	PyObject *pFunc = PyObject_GetAttrString(pModule, "acquire_data");
 	if (pFunc == NULL){
 		printf("pFunc is NULL");
 		Py_Finalize();
@@ -72,9 +73,9 @@ int main(){
 		return 0;
 	}
 	printf("C: Function imported\n");
-	PyObject *pArgv = NULL;
+	PyObject *pArgv = Py_BuildValue("(i)", 500000);
 	printf("C: Is trying to call the import_data function\n");
-	PyEval_CallObject(pFunc, pArgv);
+	result = PyEval_CallObject(pFunc, pArgv);
 	printf("C: function calling is over\n");
 	Py_Finalize();
 	getchar();
