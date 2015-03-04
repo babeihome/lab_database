@@ -85,7 +85,7 @@ int main(){
 	//printf("Parsed data: %s\n", data_bubble);
 	fs.open("./data_package.txt", ios::out);
 	fs << data_bubble;
-	fs.close;
+	fs.close();
 	Py_Finalize();
 	getchar();
 	return 1;
