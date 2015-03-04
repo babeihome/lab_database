@@ -46,6 +46,7 @@ int main(){
 	PyRun_SimpleString("import sys");
 	PyRun_SimpleString("import os.path");
 	PyRun_SimpleString("sys.path.append('../python_API')");
+	PyRun_SimpleString("sys.path.append('/usr/lib64/python2.6/site-packages/");
 	/*
 	PyRun_SimpleString("print os.path.realpath(__file__)");
 	
