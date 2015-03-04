@@ -58,6 +58,7 @@ def acquire_data(time):
     cur.execute(order)
     result = cur.fetchone()
     print "P: result has been read out"
-    print "P: type of result :" + str(type(result))
-    print "P: " + str(result)
-    return result
+    #print "P: type of result :" + str(type(result))
+    #print "P: " + str(result)
+    print "P: result type: " + str(type(result[4]))
+    return result[4]

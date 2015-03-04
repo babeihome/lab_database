@@ -36,7 +36,8 @@ void printList(PyObject* pList){
 
 int main(){
 	//Interupter of Python initialize first
-	PyObject * result = NULL;
+	PyObject * result_py = NULL;
+	char * data_bubble = NULL;
 	Py_Initialize();
 
 	if (!Py_IsInitialized()){
@@ -75,8 +76,10 @@ int main(){
 	printf("C: Function imported\n");
 	PyObject *pArgv = Py_BuildValue("(i)", 500000);
 	printf("C: Is trying to call the import_data function\n");
-	result = PyEval_CallObject(pFunc, pArgv);
+	result_py = PyEval_CallObject(pFunc, pArgv);
 	printf("C: function calling is over\n");
+	PyArg_Parse(result_py, "s", &data_bubble);
+	printf("Parsed data: %s\n", data_bubble);
 	Py_Finalize();
 	getchar();
 	return 1;
