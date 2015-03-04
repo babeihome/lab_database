@@ -64,7 +64,7 @@ int main(){
 		return 0;
 	}
 	printf("C: operation level module imported\n");
-	PyObject *pFunc = PyObject_GetAttrString(pModule, "Select");
+	PyObject *pFunc = PyObject_GetAttrString(pModule, "import_data");
 	if (pFunc == NULL){
 		printf("pFunc is NULL");
 		Py_Finalize();
