@@ -1,6 +1,8 @@
 #include <Python.h>
+#include <fstream>
 
 #define ManualBreak getchar();return 0;
+using namespace std;
 
 void printDict(PyObject* obj)
 {
@@ -38,6 +40,7 @@ int main(){
 	//Interupter of Python initialize first
 	PyObject * result_py = NULL;
 	char * data_bubble = NULL;
+	fstream fs;
 	Py_Initialize();
 
 	if (!Py_IsInitialized()){
@@ -79,7 +82,10 @@ int main(){
 	result_py = PyEval_CallObject(pFunc, pArgv);
 	printf("C: function calling is over\n");
 	PyArg_Parse(result_py, "s", &data_bubble);
-	printf("Parsed data: %s\n", data_bubble);
+	//printf("Parsed data: %s\n", data_bubble);
+	fs.open("./data_package.txt", ios::out);
+	fs << data_bubble;
+	fs.close;
 	Py_Finalize();
 	getchar();
 	return 1;
